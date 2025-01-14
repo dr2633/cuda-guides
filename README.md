@@ -2,27 +2,36 @@
 
 This repository contains a comprehensive tutorial to help you learn CUDA C++ programming from scratch. The tutorial is structured into well-defined sections, ranging from introductory topics to advanced CUDA features, with practical code examples and exercises.
 
+## About This Guide
+If you're a Python developer or AI engineer who typically steers clear of C++, but finds yourself **CUDA curious** - you're in the right place! This guide aims to make GPU programming accessible to those more comfortable in the Python ecosystem, helping you bridge the gap between high-level ML frameworks and hardware-level optimization.
+
+### Who This Guide is For
+- Python developers looking to venture beyond high-level frameworks
+- ML engineers seeking to optimize model performance through custom CUDA kernels
+- Data scientists interested in hardware-aware programming
+- Anyone curious about extracting maximum performance from modern GPU architectures
+
+### Why CUDA C++ Now?
+As AI and ML workloads become increasingly complex and computational demands grow, understanding the underlying hardware and how to effectively communicate with it becomes crucial. While frameworks like PyTorch and TensorFlow abstract away much of the complexity, knowledge of CUDA C++ enables you to:
+- Write custom kernels for unique model architectures
+- Optimize performance for specific hardware configurations
+- Prepare for emerging hardware architectures
+- Develop efficient solutions for edge deployment
+- Understand and optimize data center networking patterns
+
+
 ## **Table of Contents**
 
-1. [Introduction](#1-introduction)
-2. [Programming Model](#2-programming-model)
-3. [Programming Interface](#3-programming-interface)
-4. [Hardware Implementation](#4-hardware-implementation)
-5. [Performance Guidelines](#5-performance-guidelines)
-6. [CUDA-Enabled GPUs](#6-cuda-enabled-gpus)
-7. [C++ Language Extensions](#7-c-language-extensions)
-8. [Cooperative Groups](#8-cooperative-groups)
-9. [CUDA Dynamic Parallelism](#9-cuda-dynamic-parallelism)
-10. [Virtual Memory Management](#10-virtual-memory-management)
-11. [Stream Ordered Memory Allocator](#11-stream-ordered-memory-allocator)
-12. [Graph Memory Nodes](#12-graph-memory-nodes)
-13. [Mathematical Functions](#13-mathematical-functions)
-14. [C++ Language Support](#14-c-language-support)
-15. [Texture Fetching](#15-texture-fetching)
-16. [Compute Capabilities](#16-compute-capabilities)
-17. [Driver API](#17-driver-api)
-18. [CUDA Environment Variables](#18-cuda-environment-variables)
-19. [Unified Memory Programming](#19-unified-memory-programming)
+1. [Introduction](01-introduction.md)
+2. [Kernels](02-kernels.md)
+3. [Memory Hierarchy](03-memory-hierarchy.md)
+4. [Heterogeneous Computing]()
+
+
+### Getting Started
+Begin with `docs/introduction.md` for a foundation in parallel processing concepts before moving on to practical CUDA programming.
+
+Remember: You don't need to become a C++ expert - you just need enough understanding to effectively harness GPU power for your ML workloads. Let's begin!
 
 ## Environment Setup
 
@@ -106,24 +115,14 @@ If you prefer not to use Docker, consider using a cloud-based environment such a
 
 Both options allow you to run CUDA code without the need for local GPU support.
 
+## Official Resources
 
-### Resources
+### Hardware-Specific Guides
+- [Hopper Tuning Guide CUDA](https://docs.nvidia.com/cuda/hopper-tuning-guide/index.html)
+- [H100/H200 User Guide](https://docs.nvidia.com/dgx/dgxh100-user-guide/dgxh100-user-guide.pdf)
+- [Tuning and Deploying on H100](https://docs.nvidia.com/launchpad/ai/h100-mig/latest/h100-mig-gpu.html)
 
-
-Hopper Tuning Guide CUDA 
-https://docs.nvidia.com/cuda/hopper-tuning-guide/index.html
-
-H100/H200 User Guide 
-https://docs.nvidia.com/dgx/dgxh100-user-guide/dgxh100-user-guide.pdf
-
-Tuning and Deploying on H100 
-https://docs.nvidia.com/launchpad/ai/h100-mig/latest/h100-mig-gpu.html
-
-## About CUDA 
-https://developer.nvidia.com/about-cuda
-
-## CUDA C++ Best Practices Guide 
-https://docs.nvidia.com/cuda/cuda-c-best-practices-guide/index.html#
-
-## NVIDIA Deep Learning Institute 
-https://www.nvidia.com/en-us/training/
+### Documentation and Learning
+- [About CUDA](https://developer.nvidia.com/about-cuda)
+- [CUDA C++ Best Practices Guide](https://docs.nvidia.com/cuda/cuda-c-best-practices-guide/index.html)
+- [NVIDIA Deep Learning Institute](https://www.nvidia.com/en-us/training/)
