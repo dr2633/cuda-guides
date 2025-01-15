@@ -1,12 +1,12 @@
 # Introduction to GPU Programming and Parallelizationn
 
-# Part 1: Introduction to Parallel Processing (Amdahl's Law)
+# Part 1: From Amdahl's Law to Empirical Scaling Laws 
 
-## Parallelization and Information Processing
+## Information Theory and Parallization
+
 Information processing, whether in biological systems or computer architectures, fundamentally relies on parallelization to handle complexity efficiently. Shannon's information theory shows us that processing and transmitting information requires physical resources - time, energy, and space. As the amount of information grows, sequential processing quickly becomes a bottleneck, making parallel processing not just beneficial but essential for scaling.
 
 Amdahl's Law, often cited as a limitation on parallel speedup, actually reveals a deeper truth: systems that survive and thrive inevitably evolve toward parallel architectures. While the law states that sequential bottlenecks limit overall speedup, it also implicitly shows why successful systems (both biological and artificial) minimize sequential dependencies. Your brain, for instance, processes vast amounts of sensory information through parallel pathways - not because it's merely faster, but because it's the only efficient way to handle the complexity of sensory streams within physical and temporal constraints imposed on organisms.
-
 
 
 ## Parallelization and Information Processing
@@ -16,7 +16,14 @@ Amdahl's Law, often cited as a limitation on parallel speedup, actually reveals 
 
 *Figure 1: Amdahl's Law demonstrates how the parallel portion of a program determines the maximum possible speedup with increased computing resources.*
 
-Modern GPUs exemplify this principle in computing, processing thousands of operations simultaneously to achieve massive computational throughput. Similar to how your brain coordinates multiple sensory inputs and processing regions, GPUs coordinate thousands of processing cores to tackle complex computational tasks efficiently. This parallel architecture isn't just an optimization - it's a fundamental requirement for handling the scale of modern computational challenges.
+Amdahl's Law has significant implications for the design of parallel computing systems. It suggests that to achieve substantial speedups for real-world applications, which often have both serial and parallel portions, heterogeneous computing techniques are necessary. Novel speedup and energy consumption models based on a more general representation of heterogeneity, known as the normal form heterogeneity, have been developed to support a wide range of heterogeneous many-core architectures. As this trend towards heterogeneous computing accelerates, ensuring that developers build software to leverage these architectures will be a consistent theme throughout this text.
+
+For those interested in exploring the topic of performance and power consumption in heterogeneous computing systems further, see:
+
+Speedup and Power Scaling Models for Heterogeneous Many-Core Systems (Rafiev et al., 2018)
+https://ieeexplore.ieee.org/abstract/document/8255653
+
+Modern GPUs exemplify this principle in computing, processing thousands of operations simultaneously to achieve massive computational throughput. Similar to how your brain coordinates activity across circuits to process sensory information and determine future sequences of actions, GPUs coordinate thousands of processing cores to tackle complex computational tasks efficiently. 
 
 ## From Amdahl to Modern Scaling Laws
 The principles underlying Amdahl's Law have found new relevance in the era of large language models and neural networks. Just as Amdahl's Law describes how parallel portions of programs determine potential speedup, modern scaling laws reveal how model performance improves with increased computation and data:

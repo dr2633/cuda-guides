@@ -40,7 +40,7 @@ As AI and ML workloads become increasingly complex and computational demands gro
 - Develop efficient solutions for edge deployment and AI inference
 - Understand and optimize data center networking patterns
 
-<img src="figures/cuda.png" width="400" alt="NVIDIA CUDA">
+<img src="figures/cuda.png" width="300" alt="NVIDIA CUDA">
 
 <!-- <img src="figures/CUDA.jpg" width="600" alt="NVIDIA CUDA"> -->
 
@@ -178,7 +178,9 @@ Both options allow you to run CUDA code without the need for local GPU support.
 
 ## Contributing
 
-Contributions are encourages! Please read our [Contributing Guidelines](CONTRIBUTING.md) for details on how to submit pull requests. Feel free to reach out to me at derek.rosenzweig1@gmail.com with any questions or suggestions. 
+Contributions are encourages! Please read our [Contributing Guidelines](CONTRIBUTING.md) for details on how to submit pull requests. 
+
+Feel free to reach out to me at derek.rosenzweig1@gmail.com with any questions. Actively looking for collaborators! 
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
