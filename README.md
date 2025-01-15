@@ -183,4 +183,5 @@ Contributions are encourages! Please read our [Contributing Guidelines](CONTRIBU
 Feel free to reach out to me at derek.rosenzweig1@gmail.com with any questions. Actively looking for collaborators! 
 
 ## License
+
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.

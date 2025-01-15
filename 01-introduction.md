@@ -4,39 +4,39 @@
 
 ## Information Theory and Parallization
 
-Information processing, whether in biological systems or computer architectures, fundamentally relies on parallelization to handle complexity efficiently. Shannon's information theory shows us that processing and transmitting information requires physical resources - time, energy, and space. As the amount of information grows, sequential processing quickly becomes a bottleneck, making parallel processing not just beneficial but essential for scaling.
+Information processing — whether in biological systems or computer architectures — relies on parallelization to handle complexity efficiently. Claude Shannon's information theory demonstrates that processing information inherently demands time, energy, and space. As the volume of information grows, sequential processing becomes a bottleneck, making parallel processing essential for scaling.
+Amdahl's Law, often cited as a limitation on parallel speedup, actually reveals a deeper truth: systems that survive and propagate inevitably evolve toward parallel and heterogeneous architectures. While the law states that sequential bottlenecks limit overall speedup, it also highlights why successful systems—both biological and artificial—minimize these dependencies by distributing tasks across specialized units. 
 
-Amdahl's Law, often cited as a limitation on parallel speedup, actually reveals a deeper truth: systems that survive and thrive inevitably evolve toward parallel architectures. While the law states that sequential bottlenecks limit overall speedup, it also implicitly shows why successful systems (both biological and artificial) minimize sequential dependencies. Your brain, for instance, processes vast amounts of sensory information through parallel pathways - not because it's merely faster, but because it's the only efficient way to handle the complexity of sensory streams within physical and temporal constraints imposed on organisms.
-
-
-## Parallelization and Information Processing
-[First two paragraphs are strong, keep as is]
+Amdahl's Law, often cited as a limitation on parallel speedup, reveals a deeper truth: systems that survive and propagate inevitably evolve toward parallel and heterogeneous architectures. By highlighting the constraints imposed by sequential bottlenecks, the law underscores the importance of minimizing dependencies through specialized units, such as CPUs, GPUs, and ASICs. This principle is evident in both biological systems—like the brain's parallel sensory pathways—and modern computing architectures that offload tasks to appropriate processors for scalability.
 
 <img src="figures/AmdahlsLaw.png" width="500" alt="Amdahl">
 
-*Figure 1: Amdahl's Law demonstrates how the parallel portion of a program determines the maximum possible speedup with increased computing resources.*
+*Figure 1: Amdahl's Law demonstrates how the parallel portion of a program determines the maximum possible speedup with increased computing resources. It highlights the diminishing returns as sequential bottlenecks dominate.*
 
-Amdahl's Law has significant implications for the design of parallel computing systems. It suggests that to achieve substantial speedups for real-world applications, which often have both serial and parallel portions, heterogeneous computing techniques are necessary. Novel speedup and energy consumption models based on a more general representation of heterogeneity, known as the normal form heterogeneity, have been developed to support a wide range of heterogeneous many-core architectures. As this trend towards heterogeneous computing accelerates, ensuring that developers build software to leverage these architectures will be a consistent theme throughout this text.
+The implications of Amdahl's Law extend to the design of modern computing systems. Real-world applications often have serial and parallel components, making heterogeneous techniques essential for significant speedups. For example, GPUs coordinate thousands of cores to achieve massive computational throughput, mirroring the efficiency of biological systems that allocate tasks across specialized circuits.
 
 For those interested in exploring the topic of performance and power consumption in heterogeneous computing systems further, see:
 
-Speedup and Power Scaling Models for Heterogeneous Many-Core Systems (Rafiev et al., 2018)
-https://ieeexplore.ieee.org/abstract/document/8255653
+For further exploration, see Speedup and Power Scaling Models for Heterogeneous Many-Core Systems (Rafiev et al., 2018): https://ieeexplore.ieee.org/abstract/document/8255653
 
 Modern GPUs exemplify this principle in computing, processing thousands of operations simultaneously to achieve massive computational throughput. Similar to how your brain coordinates activity across circuits to process sensory information and determine future sequences of actions, GPUs coordinate thousands of processing cores to tackle complex computational tasks efficiently. 
 
 ## From Amdahl to Modern Scaling Laws
+
 The principles underlying Amdahl's Law have found new relevance in the era of large language models and neural networks. Just as Amdahl's Law describes how parallel portions of programs determine potential speedup, modern scaling laws reveal how model performance improves with increased computation and data:
 
 <img src="figures/scaling.png" width="500" alt="scaling">
 
-*Figure 2: Language model performance exhibits predictable scaling behavior as we increase model size, dataset size, and compute resources. These scaling laws reflect the fundamental relationship between parallelization and performance improvement that Amdahl first formalized.*
+*Figure 2: Language model performance exhibits predictable scaling behavior with increased model size, dataset size, and compute resources. Implicit in Kaplan et al. (2020) is the connection between parallelization and GPU performance.*
 
-## Computer and Cognitive Science (PDP)
+## Connections in Computer and Cognitive Science (Parallel Distributed Proccessing)
+
 The concept of parallel processing has deep roots in both computer science and cognitive science. The work of McClelland, Rumelhart, and Hinton on Parallel Distributed Processing (PDP) [1] helped establish foundational principles that bridge biological and artificial information processing systems. Their work demonstrated how complex behaviors can emerge from parallel processing of simple computational units - a principle that remains relevant in modern GPU computing, where thousands of simple cores work together to solve complex problems.
 
 See PDP Handbook developed by Dr. McClelland here: 
 https://web.stanford.edu/group/pdplab/pdphandbook/handbook.pdf
+
+The principles outlined in PDP laid the groundwork for understanding how parallel computation can produce emergent complexity. This is directly mirrored in modern GPU architectures, where thousands of cores operate in unison to solve intricate problems in AI and data science.
 
 
 ## Types of Parallelism
@@ -209,21 +209,24 @@ NVIDIA's comprehensive software stack development was crucial for adoption:
 *[A Rabbit Hole Exploration]*
 
 One of the key features of CUDA C++ is its ability to provide developers with abstractions for partitioning complex problems. This hierarchical approach enables:
+
 - Division of problems into coarse subtasks for parallel execution across thread blocks
 - Further decomposition into fine-grained tasks for thread-level parallelism
 - Automatic scalability through cooperative computing across streaming multiprocessors (SMs)
 
 #### Parallel Patterns: From GPUs to AI Agents (Benefits of Abstraction)
 
-Interestingly, similar patterns of abstraction and task decomposition are emerging in modern AI agent architectures:
-- **LangGraph and Agent Frameworks**: These provide programming interfaces for controlling multi-agent systems, similar to how CUDA manages thread blocks
-- **Task Decomposition**: Like GPU threads coordinating within blocks, AI agents can be organized into cooperative groups for complex tasks
-- **Hierarchical Control**: Just as CUDA manages different levels of parallelism, agent systems require orchestration at multiple scales
+Similar patterns of abstraction and task decomposition are emerging in modern AI agent architectures:
+
+- **LangGraph and Agent Frameworks**: These tools provide programming interfaces for orchestrating multi-agent systems, managing dependencies, communication, and task allocation—similar to how CUDA handles thread blocks.
+- **Task Decomposition**: Just as GPU threads coordinate within blocks, AI agents can be organized into cooperative groups to tackle complex tasks.
+- **Hierarchical Control**: CUDA manages multiple levels of parallelism, while agent systems require orchestration at global and local scales to ensure seamless coordination.
 
 #### Dynamic Scheduling: From Thread Blocks to Agent Tasks
+
 In CUDA architecture, each block of threads can be scheduled on any available multiprocessor within a GPU in any order, concurrently or sequentially. This flexibility means a compiled CUDA program can execute on any number of multiprocessors, with only the runtime system needing to know the actual multiprocessor count.
 
-This architectural principle has fascinating parallels in modern multi-agent systems. For instance, Anthropic's Constitutional AI approach with Altera [7] demonstrates how agent behaviors can be modularly designed and dynamically scheduled, similar to GPU thread blocks. Just as CUDA runtime manages thread block distribution, multi-agent frameworks can orchestrate task distribution across available agent resources without requiring individual agents to understand the full system topology.
+This architectural principle has fascinating parallels in modern multi-agent systems. For instance, Altera [7] demonstrates how agent behaviors can be modularly designed and dynamically scheduled, similar to GPU thread blocks. Just as CUDA runtime manages thread block distribution, multi-agent frameworks can orchestrate task distribution across available agent resources without requiring individual agents to understand the full system topology.
 
 #### Future Implications
 The lessons learned from GPU programming models might inform the development of:
@@ -234,6 +237,10 @@ The lessons learned from GPU programming models might inform the development of:
 *This parallel between GPU architecture patterns and emerging AI systems suggests that the principles of parallel computation scale beyond hardware to higher-level problem spaces.*
 
 <img src="figures/PIANO.jpg" width="400" alt="PIANO">
+
+*PIANO (Parallel Information Aggregation via Neural Orchestration), an architecture that enables agents to run multiple processes concurrently while maintaining cohesive behavior through a central decision-making system. This is helpful in considering how heterogeneuous systems enable GPU developers to overcome the upper bounds imposed on parallel processing systems in Amdahl's Law.*
+
+For example, in logistics planning, PIANO could enable fleets of autonomous delivery vehicles to operate concurrently, coordinating routes and deliveries while ensuring cohesive, system-level decision-making through distributed processing and centralized orchestration. Similarly, in large-scale AI workflows, PIANO could facilitate efficient communication between data centers, optimizing resource allocation and reducing costs during intensive training runs.
 
 **Additional Resources:**
 - [LangGraph: Building Language Agent Systems](https://github.com/langchain-ai/langgraph) [4]
