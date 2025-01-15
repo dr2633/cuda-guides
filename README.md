@@ -3,29 +3,37 @@
 This repository contains a comprehensive tutorial to help you learn CUDA C++ programming from scratch. The tutorial is structured into well-defined sections, ranging from introductory topics to advanced CUDA features, with practical code examples and exercises.
 
 ## About This Guide
-If you're a Python developer or AI engineer who typically steers clear of C++, but finds yourself **CUDA curious** - you're in the right place! This guide aims to make GPU programming accessible to those more comfortable in the Python ecosystem, helping you bridge the gap between high-level ML frameworks and hardware-level optimization.
-
-### Who This Guide is For
-- Python developers looking to venture beyond high-level frameworks
-- ML engineers seeking to optimize model performance through custom CUDA kernels
-- Data scientists interested in hardware-aware programming
-- Anyone curious about extracting maximum performance from modern GPU architectures
+If you're a Python developer or AI engineer allergic to C++ (stuffy nose and watery eyes when looking at curly braces), but find yourself tempted to dive deeper into CUDA and GPU programming - you're in the right place! This guide is built to make GPU programming accessible to those comfortable in the safe space of the Python ecosystem, helping you bridge the gap between high-level ML frameworks and hardware-level optimization. Think of it as your friendly prompt to venture beyond `torch.cuda` and write your own GPU kernels! 💪
 
 ### Why CUDA C++ Now?
 As AI and ML workloads become increasingly complex and computational demands grow, understanding the underlying hardware and how to effectively communicate with it becomes crucial. While frameworks like PyTorch and TensorFlow abstract away much of the complexity, knowledge of CUDA C++ enables you to:
 - Write custom kernels for unique model architectures
 - Optimize performance for specific hardware configurations
 - Prepare for emerging hardware architectures
-- Develop efficient solutions for edge deployment
+- Develop efficient solutions for edge deployment and AI inference
 - Understand and optimize data center networking patterns
 
-
-## **Table of Contents**
+## Table of Contents
 
 1. [Introduction](01-introduction.md)
+   - Parallel processing concepts
+   - GPU architecture basics
+   - CUDA programming model
+
 2. [Kernels](02-kernels.md)
+   - Writing your first CUDA kernel
+   - Thread hierarchy
+   - Synchronization
+
 3. [Memory Hierarchy](03-memory-hierarchy.md)
-4. [Heterogeneous Computing]()
+   - Global, shared, and local memory
+   - Memory coalescing
+   - Cache optimization
+
+4. [Heterogeneous Computing](04-heterogeneous-computing.md)
+   - CPU-GPU interaction
+   - Asynchronous operations
+   - Multi-GPU systems
 
 
 ### Getting Started
@@ -126,3 +134,16 @@ Both options allow you to run CUDA code without the need for local GPU support.
 - [About CUDA](https://developer.nvidia.com/about-cuda)
 - [CUDA C++ Best Practices Guide](https://docs.nvidia.com/cuda/cuda-c-best-practices-guide/index.html)
 - [NVIDIA Deep Learning Institute](https://www.nvidia.com/en-us/training/)
+
+## Prerequisites
+- Python programming experience
+- Basic understanding of ML frameworks (PyTorch + TensorFlow)
+- NVIDIA GPU with CUDA support
+- Linux/Windows operating system (see macOS section for alternatives)
+
+## Contributing
+
+Contributions are encourages! Please read our [Contributing Guidelines](CONTRIBUTING.md) for details on how to submit pull requests. Feel free to reach out to me at derek.rosenzweig1@gmail.com with any questions or suggestions. 
+
+## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
