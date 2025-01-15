@@ -16,34 +16,18 @@ Our approach:
 - Focus on practical ML/AI applications
 - Step-by-step journey from high-level frameworks to hardware optimization
 
-## Resources and Inspiration
-
-CUDA Tutorials
-https://cuda-tutorial.readthedocs.io/en/latest/tutorials/tutorial01/
-
-
-An Even Easier Introduction to CUDA (Mark Harris)
-https://developer.nvidia.com/blog/even-easier-introduction-cuda/
-
-
-CUDA C/C++ Basics (Cyril Zeller)
-https://www.nvidia.com/docs/io/116711/sc11-cuda-c-basics.pdf
-
-
+<img src="figures/cuda.png" width="300" alt="NVIDIA CUDA">
 
 ### Why CUDA C++ Now?
 
 As AI and ML workloads become increasingly complex and computational demands grow, understanding the underlying hardware and how to effectively communicate with it becomes crucial. While frameworks like PyTorch and TensorFlow abstract away much of the complexity, knowledge of CUDA C++ enables you to:
-- Write custom kernels for unique model architectures
+
 - Optimize performance for specific hardware configurations
-- Prepare for emerging hardware architectures
+- Prepare for emerging hardware architectures 
 - Develop efficient solutions for edge deployment and AI inference
 - Understand and optimize data center networking patterns
 
-<img src="figures/cuda.png" width="300" alt="NVIDIA CUDA">
-
 <!-- <img src="figures/CUDA.jpg" width="600" alt="NVIDIA CUDA"> -->
-
 
 ## Table of Contents
 
@@ -159,8 +143,9 @@ Since CUDA is not natively supported on macOS, you can use a Docker container or
 ### Alternative: Use a Cloud Service
 If you prefer not to use Docker, consider using a cloud-based environment such as Google Colab or AWS, which provides access to GPUs with CUDA support.
 
-- **Google Colab**: Offers free GPU access for small-scale development.
-- **AWS EC2**: Provides instances with NVIDIA GPUs for larger projects.
+- [**Google Cloud Platform**](https://cloud.google.com/docs/tutorials?doctype=quickstart): Offers free GPU access for small-scale development.
+- [**AWS EC2**](https://aws.amazon.com/pm/ec2/?trk=36c6da98-7b20-48fa-8225-4784bced9843&sc_channel=ps&ef_id=Cj0KCQiA1p28BhCBARIsADP9HrNdKtQLqdKlaY2rbnEpX_-ttWlfOkZCc9NpKfnhj8vYlEGmeN-r9xAaAjt7EALw_wcB:G:s&s_kwcid=AL!4422!3!467723097970!e!!g!!aws%20ec2!11198711716!118263955828&gbraid=0AAAAADjHtp9nWAc84pCSjyHQCzgvPVfVS&gclid=Cj0KCQiA1p28BhCBARIsADP9HrNdKtQLqdKlaY2rbnEpX_-ttWlfOkZCc9NpKfnhj8vYlEGmeN-r9xAaAjt7EALw_wcB): Provides instances with NVIDIA GPUs for larger projects.
+
 
 Both options allow you to run CUDA code without the need for local GPU support.
 
@@ -176,11 +161,19 @@ Both options allow you to run CUDA code without the need for local GPU support.
 - [CUDA C++ Best Practices Guide](https://docs.nvidia.com/cuda/cuda-c-best-practices-guide/index.html)
 - [NVIDIA Deep Learning Institute](https://www.nvidia.com/en-us/training/)
 
+### Resources and Inspiration
+
+<!-- - [CUDA Tutorials](https://cuda-tutorial.readthedocs.io/en/latest/tutorials/tutorial01/) -->
+- [An Even Easier Introduction to CUDA (Mark Harris)](https://developer.nvidia.com/blog/even-easier-introduction-cuda/)
+- [CUDA C/C++ Basics (Cyril Zeller)](https://www.nvidia.com/docs/io/116711/sc11-cuda-c-basics.pdf)
+
 ## Contributing
 
-Contributions are encourages! Please read our [Contributing Guidelines](CONTRIBUTING.md) for details on how to submit pull requests. 
+We welcome contributions to improve this guide! Here's how you can help:
 
-Feel free to reach out to me at derek.rosenzweig1@gmail.com with any questions. Actively looking for collaborators! 
+- Submit issues or feature requests through the Issues page.
+- Create a pull request for bug fixes, new tutorials, or additional resources.
+- Reach out with collaboration ideas to derek.rosenzweig1@gmail.com.
 
 ## License
 
