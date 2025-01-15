@@ -89,6 +89,12 @@ CPUs and GPUs are designed with fundamentally different goals in mind:
 - Better performance per watt for parallel workloads
 - More effective use of silicon area for compute operations
 
+![Comparing architecture of CPU and GPU](figures/ternminal-cpu-vs-gpu.png)
+
+See Charles Frye's post for Modal: https://modal.com/gpu-glossary
+And Fabien Sanglard: https://fabiensanglard.net/cuda/
+
+
 # Part 2: CUDA - Bridging Hardware and Software
 
 ## CUDA and Expressive Languages for Hardware Communication and Compatibility
@@ -157,6 +163,8 @@ The CUDA platform played a pivotal role in the deep learning revolution of the 2
 - **2012:** AlexNet's breakthrough in ImageNet competition, powered by CUDA GPU acceleration [3]
 - **2014:** Introduction of cuDNN (CUDA Deep Neural Network) library
 - **2015:** Development of major frameworks like TensorFlow and PyTorch with CUDA support
+
+*Note: AlexNet was trained on two [NVIDIA GTX 580 GPUs](https://www.nvidia.com/docs/IO/100940/GeForce_GTX_580_Datasheet.pdf) in 2012. The GTX 580 was based on the Fermi architecture and had 512 CUDA cores. 
 
 ### Software Stack Evolution
 NVIDIA's comprehensive software stack development was crucial for adoption:
