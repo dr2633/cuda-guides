@@ -1,6 +1,6 @@
-# Introduction to Parallel Processing and CUDA Programming
+# Introduction to GPU Programming and Parallelizationn
 
-# Part 1: Introduction to Parallel Processing Concepts
+# Part 1: Introduction to Parallel Processing (Amdahl's Law)
 
 ## Parallelization and Information Processing
 Information processing, whether in biological systems or computer architectures, fundamentally relies on parallelization to handle complexity efficiently. Shannon's information theory shows us that processing and transmitting information requires physical resources - time, energy, and space. As the amount of information grows, sequential processing quickly becomes a bottleneck, making parallel processing not just beneficial but essential for scaling.
@@ -11,6 +11,11 @@ Amdahl's Law, often cited as a limitation on parallel speedup, actually reveals 
 *Figure 1: Amdahl's Law demonstrates how the parallel portion of a program determines the maximum possible speedup with increased computing resources.*
 
 Modern GPUs exemplify this principle in computing, processing thousands of operations simultaneously to achieve massive computational throughput. Similar to how your brain coordinates multiple sensory inputs and processing regions, GPUs coordinate thousands of processing cores to tackle complex computational tasks efficiently. This parallel architecture isn't just an optimization - it's a fundamental requirement for handling the scale of modern computational challenges.
+
+
+![Scaling Laws](figures/scaling.png)
+
+*Figure 2
 
 ## Computer and Cognitive Science (PDP)
 The concept of parallel processing has deep roots in both computer science and cognitive science. The work of McClelland, Rumelhart, and Hinton on Parallel Distributed Processing (PDP) [1] helped establish foundational principles that bridge biological and artificial information processing systems. Their work demonstrated how complex behaviors can emerge from parallel processing of simple computational units - a principle that remains relevant in modern GPU computing, where thousands of simple cores work together to solve complex problems.
