@@ -35,6 +35,10 @@ The principles underlying Amdahl's Law have found new relevance in the era of la
 ## Computer and Cognitive Science (PDP)
 The concept of parallel processing has deep roots in both computer science and cognitive science. The work of McClelland, Rumelhart, and Hinton on Parallel Distributed Processing (PDP) [1] helped establish foundational principles that bridge biological and artificial information processing systems. Their work demonstrated how complex behaviors can emerge from parallel processing of simple computational units - a principle that remains relevant in modern GPU computing, where thousands of simple cores work together to solve complex problems.
 
+See PDP Handbook developed by Dr. McClelland here: 
+https://web.stanford.edu/group/pdplab/pdphandbook/handbook.pdf
+
+
 ## Types of Parallelism
 Modern GPU computing implements several distinct forms of parallelism, each suited to different types of computational problems:
 
@@ -229,6 +233,8 @@ The lessons learned from GPU programming models might inform the development of:
 
 *This parallel between GPU architecture patterns and emerging AI systems suggests that the principles of parallel computation scale beyond hardware to higher-level problem spaces.*
 
+<img src="figures/PIANO.jpg" width="400" alt="PIANO">
+
 **Additional Resources:**
 - [LangGraph: Building Language Agent Systems](https://github.com/langchain-ai/langgraph) [4]
 - [LangChain Expression Language (LCEL)](https://python.langchain.com/docs/expression_language/) [5]
@@ -241,5 +247,5 @@ The lessons learned from GPU programming models might inform the development of:
 
 [6] Wooldridge, M. (2009). [An Introduction to MultiAgent Systems](https://www.sciencedirect.com/book/9780470519460/an-introduction-to-multiagent-systems). John Wiley & Sons.
 
-[7] Alter.AL (2024). [Project Sid: Many-agent simulations toward AI civilization](https://arxiv.org/abs/2411.00114)
+[7] Altera.AL (2024). [Project Sid: Many-agent simulations toward AI civilization](https://arxiv.org/abs/2411.00114)
 
