@@ -1,10 +1,16 @@
-# Introduction to GPU Programming and Parallelization
-Derek Rosenzweig 
+# Introduction to Parallel Processing and CUDA Programming
 
-# Part 1: Concepts in Parallel Processing
+# Part 1: Introduction to Parallel Processing Concepts
 
-## Parallelization and Efficient Computing
-Parallel processing is about simultaneously handling multiple tasks to achieve faster overall completion times. Think of it like a biological system: your brain processes information in parallel to make efficient decisions and act on sensory information gathered across multiple sensors. This parallel processing enables both speed and adaptability in handling complex tasks and streams of information. Modern GPUs exemplify this principle, processing thousands of operations simultaneously to achieve massive computational throughput.
+## Parallelization and Information Processing
+Information processing, whether in biological systems or computer architectures, fundamentally relies on parallelization to handle complexity efficiently. Shannon's information theory shows us that processing and transmitting information requires physical resources - time, energy, and space. As the amount of information grows, sequential processing quickly becomes a bottleneck, making parallel processing not just beneficial but essential for scaling.
+
+Amdahl's Law, often cited as a limitation on parallel speedup, actually reveals a deeper truth: systems that survive and thrive inevitably evolve toward parallel architectures. While the law states that sequential bottlenecks limit overall speedup, it also implicitly shows why successful systems (both biological and artificial) minimize sequential dependencies. Your brain, for instance, processes vast amounts of sensory information through parallel pathways - not because it's merely faster, but because it's the only efficient way to handle the complexity of sensory streams within physical and temporal constraints imposed on organisms.
+
+![Amdahl's Law showing the relationship between parallel portion and speedup](figures/AmdahlsLaw.png)
+*Figure 1: Amdahl's Law demonstrates how the parallel portion of a program determines the maximum possible speedup with increased computing resources.*
+
+Modern GPUs exemplify this principle in computing, processing thousands of operations simultaneously to achieve massive computational throughput. Similar to how your brain coordinates multiple sensory inputs and processing regions, GPUs coordinate thousands of processing cores to tackle complex computational tasks efficiently. This parallel architecture isn't just an optimization - it's a fundamental requirement for handling the scale of modern computational challenges.
 
 ## Computer and Cognitive Science (PDP)
 The concept of parallel processing has deep roots in both computer science and cognitive science. The work of McClelland, Rumelhart, and Hinton on Parallel Distributed Processing (PDP) [1] helped establish foundational principles that bridge biological and artificial information processing systems. Their work demonstrated how complex behaviors can emerge from parallel processing of simple computational units - a principle that remains relevant in modern GPU computing, where thousands of simple cores work together to solve complex problems.
@@ -93,7 +99,8 @@ While GPU architecture provides the hardware foundation for parallel computing, 
 
 Innovation in the software stack marked a crucial shift from GPUs being solely graphics processors to becoming general-purpose computing platforms. This transformation enabled the development of highly parallel applications, from scientific computing to artificial intelligence.
 
-https://research.nvidia.com/person/william-dally
+
+See here for a more complete [history of NVIDIA SMs](https://fabiensanglard.net/cuda/) from Fabien Sanglard. 
 
 ### Key Milestones in CUDA Development
 - **2006:** Initial CUDA announcement at Supercomputing Conference
@@ -164,7 +171,6 @@ NVIDIA's comprehensive software stack development was crucial for adoption:
 [2] Nickolls, J., Buck, I., Garland, M., & Skadron, K. (2008). [Scalable Parallel Programming with CUDA](https://dl.acm.org/doi/10.1145/1365490.1365500). Queue, 6(2), 40-53.
 
 [3] Krizhevsky, A., Sutskever, I., & Hinton, G. E. (2012). [ImageNet Classification with Deep Convolutional Neural Networks](https://papers.nips.cc/paper/2012/hash/c399862d3b9d6b76c8436e924a68c45b-Abstract.html). NeurIPS.
-
 
 
 ### Benefits of Abstraction: From Hardware to Agent Systems

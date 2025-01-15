@@ -35,6 +35,8 @@ As AI and ML workloads become increasingly complex and computational demands gro
    - Asynchronous operations
    - Multi-GPU systems
 
+5. [Thread Hierarchy](05-thread-hierarchy.md)
+
 
 ### Getting Started
 Begin with `docs/introduction.md` for a foundation in parallel processing concepts before moving on to practical CUDA programming.
