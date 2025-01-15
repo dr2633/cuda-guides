@@ -1,7 +1,7 @@
-# Introduction to Parallel Processing and CUDA Programming
+# Introduction to GPU Programming and Parallelization
 Derek Rosenzweig 
 
-# Part 1: Introduction to Parallel Processing Concepts
+# Part 1: Concepts in Parallel Processing
 
 ## Parallelization and Efficient Computing
 Parallel processing is about simultaneously handling multiple tasks to achieve faster overall completion times. Think of it like a biological system: your brain processes information in parallel to make efficient decisions and act on sensory information gathered across multiple sensors. This parallel processing enables both speed and adaptability in handling complex tasks and streams of information. Modern GPUs exemplify this principle, processing thousands of operations simultaneously to achieve massive computational throughput.
