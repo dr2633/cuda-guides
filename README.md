@@ -13,7 +13,7 @@ As AI and ML workloads become increasingly complex and computational demands gro
 - Develop efficient solutions for edge deployment and AI inference
 - Understand and optimize data center networking patterns
 
-<img src="figures/nvidia-cuda.jpg" width="600" alt="NVIDIA CUDA">
+<img src="figures/nvidia-cuda.jpg" width="300" alt="NVIDIA CUDA">
 
 ## Table of Contents
 

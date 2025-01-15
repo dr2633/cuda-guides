@@ -7,15 +7,23 @@ Information processing, whether in biological systems or computer architectures,
 
 Amdahl's Law, often cited as a limitation on parallel speedup, actually reveals a deeper truth: systems that survive and thrive inevitably evolve toward parallel architectures. While the law states that sequential bottlenecks limit overall speedup, it also implicitly shows why successful systems (both biological and artificial) minimize sequential dependencies. Your brain, for instance, processes vast amounts of sensory information through parallel pathways - not because it's merely faster, but because it's the only efficient way to handle the complexity of sensory streams within physical and temporal constraints imposed on organisms.
 
-![Amdahl's Law showing the relationship between parallel portion and speedup](figures/AmdahlsLaw.png)
+
+
+## Parallelization and Information Processing
+[First two paragraphs are strong, keep as is]
+
+<img src="figures/AmdahlsLaw.png" width="500" alt="Amdahl">
+
 *Figure 1: Amdahl's Law demonstrates how the parallel portion of a program determines the maximum possible speedup with increased computing resources.*
 
 Modern GPUs exemplify this principle in computing, processing thousands of operations simultaneously to achieve massive computational throughput. Similar to how your brain coordinates multiple sensory inputs and processing regions, GPUs coordinate thousands of processing cores to tackle complex computational tasks efficiently. This parallel architecture isn't just an optimization - it's a fundamental requirement for handling the scale of modern computational challenges.
 
+## From Amdahl to Modern Scaling Laws
+The principles underlying Amdahl's Law have found new relevance in the era of large language models and neural networks. Just as Amdahl's Law describes how parallel portions of programs determine potential speedup, modern scaling laws reveal how model performance improves with increased computation and data:
 
-![Scaling Laws](figures/scaling.png)
+<img src="figures/scaling.png" width="500" alt="scaling">
 
-*Figure 2
+*Figure 2: Language model performance exhibits predictable scaling behavior as we increase model size, dataset size, and compute resources. These scaling laws reflect the fundamental relationship between parallelization and performance improvement that Amdahl first formalized.*
 
 ## Computer and Cognitive Science (PDP)
 The concept of parallel processing has deep roots in both computer science and cognitive science. The work of McClelland, Rumelhart, and Hinton on Parallel Distributed Processing (PDP) [1] helped establish foundational principles that bridge biological and artificial information processing systems. Their work demonstrated how complex behaviors can emerge from parallel processing of simple computational units - a principle that remains relevant in modern GPU computing, where thousands of simple cores work together to solve complex problems.
