@@ -1,4 +1,4 @@
-# CUDA C++ Tutorial
+# GPU Programming and CUDA C++: Concepts and Code Samples 
 
 This repository contains a comprehensive tutorial to help you learn CUDA C++ programming from scratch. The tutorial is structured from introductory topics to advanced CUDA features, with practical code examples and exercises.
 
@@ -32,14 +32,14 @@ As AI and ML workloads become increasingly complex and computational demands gro
 ## Table of Contents
 
 1. [Introduction](01-introduction.md)
-   - Parallel processing concepts
-   - GPU architecture basics
-   - CUDA programming model
+   - Information Theory and Parallelization
+   - From Amdahl to Modern Scaling Laws
+   - Types of Parallelism and Their Applications
 
 2. [Kernels](02-kernels.md)
-   - Writing your first CUDA kernel
-   - Thread hierarchy and synchronization
-   - Host and device memory
+   - Memory allocation for the host and device.
+   - Transferring data between CPU and GPU.
+   - Kernel execution and result validation.
 
 3. [Memory Hierarchy](03-memory-hierarchy.md)
    - Global, shared, and local memory
@@ -156,16 +156,14 @@ Both options allow you to run CUDA code without the need for local GPU support.
 - [H100/H200 User Guide](https://docs.nvidia.com/dgx/dgxh100-user-guide/dgxh100-user-guide.pdf)
 - [Tuning and Deploying on H100](https://docs.nvidia.com/launchpad/ai/h100-mig/latest/h100-mig-gpu.html)
 
-### Documentation and Learning
+### Additional Tutorials 
+- [An Even Easier Introduction to CUDA (Mark Harris)](https://developer.nvidia.com/blog/even-easier-introduction-cuda/)
+- [CUDA C/C++ Basics (Cyril Zeller)](https://www.nvidia.com/docs/io/116711/sc11-cuda-c-basics.pdf)
+
+### Documentation 
 - [About CUDA](https://developer.nvidia.com/about-cuda)
 - [CUDA C++ Best Practices Guide](https://docs.nvidia.com/cuda/cuda-c-best-practices-guide/index.html)
 - [NVIDIA Deep Learning Institute](https://www.nvidia.com/en-us/training/)
-
-### Resources and Inspiration
-
-<!-- - [CUDA Tutorials](https://cuda-tutorial.readthedocs.io/en/latest/tutorials/tutorial01/) -->
-- [An Even Easier Introduction to CUDA (Mark Harris)](https://developer.nvidia.com/blog/even-easier-introduction-cuda/)
-- [CUDA C/C++ Basics (Cyril Zeller)](https://www.nvidia.com/docs/io/116711/sc11-cuda-c-basics.pdf)
 
 ## Contributing
 
@@ -174,6 +172,8 @@ We welcome contributions to improve this guide! Here's how you can help:
 - Submit issues or feature requests through the Issues page.
 - Create a pull request for bug fixes, new tutorials, or additional resources.
 - Reach out with collaboration ideas to derek.rosenzweig1@gmail.com.
+
+Please read our [Contributing Guidelines](CONTRIBUTING.md) for details.
 
 ## License
 
