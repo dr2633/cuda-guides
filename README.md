@@ -3,9 +3,36 @@
 This repository contains a comprehensive tutorial to help you learn CUDA C++ programming from scratch. The tutorial is structured from introductory topics to advanced CUDA features, with practical code examples and exercises.
 
 ## About This Guide
-If you're a Python developer or AI engineer allergic to C++ (stuffy nose and watery eyes when looking at curly braces), but find yourself tempted to dive deeper into CUDA and GPU programming - you're in the right place! This guide is built to make GPU programming accessible to those comfortable in the safe space of the Python ecosystem, helping you bridge the gap between high-level ML frameworks and hardware-level optimization. Think of it as your friendly prompt to venture beyond `torch.cuda` and write your own GPU kernels! 💪
+
+If you're a Python developer or AI engineer allergic to C++ (stuffy nose and watery eyes when looking at curly braces), but find yourself tempted to dive deeper into CUDA and GPU programming - you're in the right place!
+
+This guide is designed to: 
+- Python developers looking to venture beyond high-level frameworks
+- Anyone who's intimidated by C++ but needs GPU performance
+- Developers ready to graduate from `torch.cuda` to writing custom kernels
+
+Our approach: 
+- Clear progression from concepts to implementation
+- Focus on practical ML/AI applications
+- Step-by-step journey from high-level frameworks to hardware optimization
+
+## Resources and Inspiration
+
+CUDA Tutorials
+https://cuda-tutorial.readthedocs.io/en/latest/tutorials/tutorial01/
+
+
+An Even Easier Introduction to CUDA (Mark Harris)
+https://developer.nvidia.com/blog/even-easier-introduction-cuda/
+
+
+CUDA C/C++ Basics (Cyril Zeller)
+https://www.nvidia.com/docs/io/116711/sc11-cuda-c-basics.pdf
+
+
 
 ### Why CUDA C++ Now?
+
 As AI and ML workloads become increasingly complex and computational demands grow, understanding the underlying hardware and how to effectively communicate with it becomes crucial. While frameworks like PyTorch and TensorFlow abstract away much of the complexity, knowledge of CUDA C++ enables you to:
 - Write custom kernels for unique model architectures
 - Optimize performance for specific hardware configurations
@@ -13,7 +40,10 @@ As AI and ML workloads become increasingly complex and computational demands gro
 - Develop efficient solutions for edge deployment and AI inference
 - Understand and optimize data center networking patterns
 
-<img src="figures/nvidia-cuda.jpg" width="300" alt="NVIDIA CUDA">
+<img src="figures/cuda.png" width="300" alt="NVIDIA CUDA">
+
+<img src="figures/CUDA.jpg" width="300" alt="NVIDIA CUDA">
+
 
 ## Table of Contents
 
@@ -145,12 +175,6 @@ Both options allow you to run CUDA code without the need for local GPU support.
 - [About CUDA](https://developer.nvidia.com/about-cuda)
 - [CUDA C++ Best Practices Guide](https://docs.nvidia.com/cuda/cuda-c-best-practices-guide/index.html)
 - [NVIDIA Deep Learning Institute](https://www.nvidia.com/en-us/training/)
-
-## Prerequisites
-- Python programming experience
-- Basic understanding of ML frameworks (PyTorch + TensorFlow)
-- NVIDIA GPU with CUDA support
-- Linux/Windows operating system (see macOS section for alternatives)
 
 ## Contributing
 
