@@ -3,11 +3,14 @@
 ## **Overview**
 This document provides a detailed explanation of the `VecAdd` kernel script, focusing on the physical mechanisms enabling memory allocation, the necessity of copying results, result verification, and memory management in CUDA programming.
 
+Pradeep Gupta provides a useful guide here: https://developer.nvidia.com/blog/cuda-refresher-cuda-programming-model/
+
 ---
 
 ## **Key Sections**
 
 ### **1. Allocating Host and Device Memory**
+
 - **Mechanism**:
     - Host memory is allocated using the standard `malloc()` function in C. This reserves memory in the system's RAM, which is managed by the CPU.
     - Device memory is allocated using `cudaMalloc()`. This function reserves memory on the GPU's global memory (VRAM), enabling GPU threads to access it during kernel execution.
@@ -116,6 +119,7 @@ int main() {
 ---
 
 ## **Takeaways for CUDA Programmers**
+
 1. **Efficient Memory Management**:
     - Minimize the use of `cudaMemcpy()` by reusing memory where possible.
     - Free memory explicitly to avoid resource leaks.
