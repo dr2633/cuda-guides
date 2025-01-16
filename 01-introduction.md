@@ -19,6 +19,8 @@ For those interested in exploring the topic of performance and power consumption
 
 For further exploration, see Speedup and Power Scaling Models for Heterogeneous Many-Core Systems (Rafiev et al., 2018): https://ieeexplore.ieee.org/abstract/document/8255653
 
+For more details, refer to [Amdahl's Law and Physics](appendix/amdahls_law_physics.md).
+
 Modern GPUs exemplify this principle in computing, processing thousands of operations simultaneously to achieve massive computational throughput. Similar to how your brain coordinates activity across circuits to process sensory information and determine future sequences of actions, GPUs coordinate thousands of processing cores to tackle complex computational tasks efficiently. 
 
 ## From Amdahl to Modern Scaling Laws
