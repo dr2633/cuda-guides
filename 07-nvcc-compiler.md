@@ -32,7 +32,7 @@ https://docs.nvidia.com/cuda/cuda-compiler-driver-nvcc/
 
 ### Example:
 ```bash
-nvcc x.cu -gencode arch=compute_50,code=sm_50 \
+nvcc 07-nvcc-compiler.cpp -gencode arch=compute_50,code=sm_50 \
           -gencode arch=compute_60,code=sm_60 \
           -gencode arch=compute_70,code="compute_70,sm_70"
 ```
@@ -46,9 +46,27 @@ PTX code can also be compiled at runtime by the device driver for compatibility 
 - Compatibility with future architectures.
 - Optimized performance leveraging driver-level improvements.
 
+
+#### PTX Generation 
+
+```bash
+# Generate PTX code
+nvcc 07-nvcc-compiler.cpp -ptx -arch=compute_80 -o 07-nvcc-compiler.ptx
+```
+
+#### CUBIN Generation 
+
+```bash
+# Generate architecture-specific binary code (CUBIN)
+nvcc 07-nvcc-compiler.cpp -cubin -arch=sm_80 -o 07-nvcc-compiler.cubin
+```
+
+
+This demonstrates how NVCC generates PTX, the intermediate representation of device code, which can be inspected to understand how CUDA translates high-level kernels.
+
 ---
 
-### 3.1.2. Binary and PTX Compatibility
+### Binary and PTX Compatibility
 
 #### Binary Compatibility
 - Binary code is architecture-specific, defined using `-code` (e.g., `-code=sm_80` for compute capability 8.0).
@@ -60,7 +78,7 @@ PTX code can also be compiled at runtime by the device driver for compatibility 
 
 ### Example:
 ```bash
-nvcc x.cu -arch=compute_80
+nvcc 07-nvcc-compiler.cpp -arch=compute_80
 ```
 
 This ensures compatibility with devices of compute capability 8.0 or higher.
@@ -95,7 +113,7 @@ The NVIDIA H100 GPU introduces advanced features such as:
 
 ### Optimized Compilation for H100:
 ```bash
-nvcc x.cu -gencode arch=compute_90,code="compute_90,sm_90"
+nvcc 07-nvcc-compiler.cpp -gencode arch=compute_90,code="compute_90,sm_90"
 ```
 
 This generates both PTX and binary code targeting compute capability 9.0 for H100 devices.
@@ -126,7 +144,7 @@ int main() {
 
 Compile for H100:
 ```bash
-nvcc matrixMultiply.cu -gencode arch=compute_90,code="compute_90,sm_90"
+nvcc 07-nvcc-compiler.cpp -gencode arch=compute_90,code="compute_90,sm_90"
 ```
 
 ---
