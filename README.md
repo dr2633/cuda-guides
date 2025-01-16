@@ -1,4 +1,4 @@
-# GPU Programming and CUDA C++: Concepts and Code Samples 
+# GPU Programming and CUDA C++
 
 This repository contains a comprehensive tutorial to help you learn CUDA C++ programming from scratch. The tutorial is structured from introductory topics to advanced CUDA features, with practical code examples and exercises.
 
@@ -20,7 +20,7 @@ Our approach:
 
 ### Why CUDA C++ Now?
 
-As AI and ML workloads become increasingly complex and computational demands grow, understanding the underlying hardware and how to effectively communicate with it becomes crucial. While frameworks like PyTorch and TensorFlow abstract away much of the complexity, knowledge of CUDA C++ enables you to:
+As AI and ML workloads become increasingly complex and computational demands grow, understanding the underlying hardware and how to effectively communicate with heterogeneous hardware configurations becomes crucial. While frameworks like PyTorch and TensorFlow abstract away much of the complexity, knowledge of CUDA C++ enables you to:
 
 - Optimize performance for specific hardware configurations
 - Prepare for emerging hardware architectures 
@@ -87,14 +87,14 @@ To set up a CUDA programming environment with C++, follow these steps:
 
 4. **Clone This Repository**:
    ```bash
-   git clone https://github.com/yourusername/cuda-tutorial.git
+   git clone https://github.com/yourusername/CUDA-Tutorials.git
    cd cuda-tutorial
    ```
 
 5. **Test the Setup**:
-    - Navigate to the `01-introduction/` directory and run:
+    - Navigate to the `/scripts` directory and run:
       ```bash
-      nvcc kernels.cpp -o kernels
+      nvcc 02-kernels.cpp -o kernels
       ./kernels
       ```
 
@@ -136,7 +136,7 @@ Since CUDA is not natively supported on macOS, you can use a Docker container or
     - Navigate to your mounted workspace directory:
       ```bash
       cd /workspace/01-introduction
-      nvcc 01-kernels.cpp -o kernels
+      nvcc 02-kernels.cpp -o kernels
       ./kernels
       ```
 
