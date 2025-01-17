@@ -47,13 +47,18 @@ int main() {
     
     // Verify results
     for (int i = 0; i < N; i++) {
+        printf("Index %d: A[%d] = %.1f, B[%d] = %.1f, C[%d] = %.1f\n", 
+           i, i, h_A[i], i, h_B[i], i, h_C[i]);
         if (fabs(h_C[i] - (h_A[i] + h_B[i])) > 1e-5) {
             printf("Error at index %d: %f\n", i, h_C[i]);
             break;
-        }
     }
+}
     printf("Vector addition completed successfully.\n");
     
+
+    
+
     // Free device and host memory
     cudaFree(d_A);
     cudaFree(d_B);
