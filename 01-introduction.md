@@ -23,9 +23,12 @@ For more details, refer to [Amdahl's Law and Physics](appendix/amdahls_law_physi
 
 Modern GPUs exemplify this principle in computing, processing thousands of operations simultaneously to achieve massive computational throughput. Similar to how your brain coordinates activity across circuits to process sensory information and determine future sequences of actions, GPUs coordinate thousands of processing cores to tackle complex computational tasks efficiently. 
 
+NVIDIA NVision 2008 
+https://www.youtube.com/watch?v=WmW6SD-EHVY
+
 ## From Amdahl to Modern Scaling Laws
 
-The principles underlying Amdahl's Law have found new relevance in the era of large language models and neural networks. Just as Amdahl's Law describes how parallel portions of programs determine potential speedup, modern scaling laws reveal how model performance improves with increased computation and data:
+The principles underlying Amdahl's Law have found new relevance in the era of large language models and artificial neural networks. Just as Amdahl's Law describes how parallel portions of programs determine potential speedup, modern scaling laws reveal how model performance improves with increased computation and data:
 
 <img src="figures/scaling.png" width="500" alt="scaling">
 
@@ -39,7 +42,6 @@ See PDP Handbook developed by Dr. McClelland here:
 https://web.stanford.edu/group/pdplab/pdphandbook/handbook.pdf
 
 The principles outlined in PDP laid the groundwork for understanding how parallel computation can produce emergent complexity. This is directly mirrored in modern GPU architectures, where thousands of cores operate in unison to solve intricate problems in AI and data science.
-
 
 ## Types of Parallelism
 Modern GPU computing implements several distinct forms of parallelism, each suited to different types of computational problems:
